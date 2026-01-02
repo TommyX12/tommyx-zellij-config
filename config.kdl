@@ -653,3 +653,7 @@ default_layout "default"
 web_client {
     font "monospace"
 }
+
+env {
+    TERM "xterm-256color"
+}

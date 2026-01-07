@@ -344,7 +344,7 @@ themes {
             background 241 241 241
             emphasis_0 16 167 120
             emphasis_1 32 165 186
-            emphasis_2 16 147 160
+            emphasis_2 30 90 160
             emphasis_3 0 142 196
         }
         text_selected {
@@ -412,7 +412,7 @@ themes {
             emphasis_3 182 214 253
         }
         frame_selected {
-            base 16 147 200
+            base 16 127 200
             background 0
             emphasis_0 215 95 95
             emphasis_1 32 165 186
@@ -420,7 +420,7 @@ themes {
             emphasis_3 0
         }
         frame_highlight {
-            base 215 95 95
+            base 55 200 0
             background 0
             emphasis_0 0 142 196
             emphasis_1 215 95 95
@@ -639,7 +639,7 @@ default_layout "default"
 // Whether to enable mouse hover effects and pane grouping functionality
 // Default: true
 //
-// advanced_mouse_actions false
+advanced_mouse_actions false
 
 // A command to run (will be wrapped with sh -c and provided the RESURRECT_COMMAND env variable)
 // after Zellij attempts to discover a command inside a pane when resurrecting sessions, the STDOUT

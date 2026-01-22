@@ -8,7 +8,91 @@ tab_template name="ui" {
    }
 }
 
-swap_tiled_layout name="vertical" {
+swap_tiled_layout name="columns" {
+    // ui {
+    //     pane split_direction="vertical" {
+    //         children
+    //     }
+    // }
+    ui max_panes=6 {
+        pane split_direction="vertical" {
+            children
+        }
+    }
+    ui max_panes=7 {
+        pane split_direction="vertical" {
+            pane; pane; pane;
+            pane { pane; pane; }
+        }
+    }
+    ui max_panes=8 {
+        pane split_direction="vertical" {
+            pane; pane;
+            pane { pane; pane; }
+            pane { pane; pane; }
+        }
+    }
+    ui max_panes=9 {
+        pane split_direction="vertical" {
+            pane;
+            pane { pane; pane; }
+            pane { pane; pane; }
+            pane { pane; pane; }
+        }
+    }
+    ui max_panes=10 {
+        pane split_direction="vertical" {
+            pane { pane; pane; }
+            pane { pane; pane; }
+            pane { pane; pane; }
+            pane { pane; pane; }
+        }
+    }
+    ui max_panes=11 {
+        pane split_direction="vertical" {
+            pane { pane; pane; }
+            pane { pane; pane; }
+            pane { pane; pane; }
+            pane { pane; pane; pane; }
+        }
+    }
+    ui max_panes=12 {
+        pane split_direction="vertical" {
+            pane { pane; pane; }
+            pane { pane; pane; }
+            pane { pane; pane; pane; }
+            pane { pane; pane; pane; }
+        }
+    }
+    ui max_panes=13 {
+        pane split_direction="vertical" {
+            pane { pane; pane; }
+            pane { pane; pane; pane; }
+            pane { pane; pane; pane; }
+            pane { pane; pane; pane; }
+        }
+    }
+    ui max_panes=14 {
+        pane split_direction="vertical" {
+            pane { pane; pane; pane; }
+            pane { pane; pane; pane; }
+            pane { pane; pane; pane; }
+            pane { pane; pane; pane; }
+        }
+    }
+    ui {
+        pane split_direction="vertical" {
+            pane { pane; pane; pane; }
+            pane { pane; pane; pane; }
+            pane { pane; pane; pane; }
+            pane { pane; pane;
+                pane stacked=true { children; }
+            }
+        }
+    }
+}
+
+swap_tiled_layout name="rows" {
     ui max_panes=7 {
         pane split_direction="vertical" {
             pane
@@ -59,41 +143,6 @@ swap_tiled_layout name="vertical" {
 //     }
 // }
 //
-
-swap_tiled_layout name="horizontal" {
-    // ui {
-    //     pane split_direction="vertical" {
-    //         children
-    //     }
-    // }
-    ui max_panes=6 {
-        pane split_direction="vertical" {
-            children
-        }
-    }
-    ui max_panes=10 {
-        pane {
-            pane split_direction="vertical" { children; }
-            pane split_direction="vertical" { pane; pane; pane; pane; }
-        }
-    }
-    ui max_panes=14 {
-        pane {
-            pane split_direction="vertical" { children; }
-            pane split_direction="vertical" { pane; pane; pane; pane; }
-            pane split_direction="vertical" { pane; pane; pane; pane; }
-        }
-    }
-    ui {
-        pane {
-            pane split_direction="vertical" { pane; pane; pane; pane; }
-            pane split_direction="vertical" { pane; pane; pane; pane; }
-            pane split_direction="vertical" { pane; pane; pane;
-                pane stacked=true { children; }
-            }
-        }
-    }
-}
 
 swap_tiled_layout name="stacked" {
     ui min_panes=5 {

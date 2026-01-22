@@ -82,12 +82,12 @@ keybinds clear-defaults=true {
         bind "Ctrl c" { ScrollToBottom; SwitchToMode "Normal"; }
         bind "e" { EditScrollback; SwitchToMode "Normal"; }
         bind "s" { SwitchToMode "EnterSearch"; SearchInput 0; }
-        bind "j" "Down" { ScrollDown; }
-        bind "k" "Up" { ScrollUp; }
-        bind "PageDown" "Right" "l" { PageScrollDown; }
-        bind "PageUp" "Left" "h" { PageScrollUp; }
-        bind "J" { HalfPageScrollDown; }
-        bind "K" { HalfPageScrollUp; }
+        bind "j" { ScrollDown; }
+        bind "k" { ScrollUp; }
+        bind "J" { PageScrollDown; }
+        bind "K" { PageScrollUp; }
+        bind "l" { HalfPageScrollDown; }
+        bind "h" { HalfPageScrollUp; }
         bind "H" { ScrollToTop; }
         bind "L" { ScrollToBottom; }
         // uncomment this and adjust key if using copy_on_select=false

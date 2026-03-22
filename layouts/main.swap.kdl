@@ -144,14 +144,14 @@ swap_tiled_layout name="rows" {
 // }
 //
 
-swap_tiled_layout name="stacked" {
-    ui min_panes=5 {
-        pane split_direction="vertical" {
-            pane
-            pane stacked=true { children; }
-        }
-    }
-}
+// swap_tiled_layout name="stacked" {
+//     ui min_panes=5 {
+//         pane split_direction="vertical" {
+//             pane
+//             pane stacked=true { children; }
+//         }
+//     }
+// }
 
 swap_floating_layout name="staggered" {
     floating_panes

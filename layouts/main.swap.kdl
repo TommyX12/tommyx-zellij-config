@@ -8,110 +8,145 @@ tab_template name="ui" {
    }
 }
 
-swap_tiled_layout name="columns" {
-    // ui {
-    //     pane split_direction="vertical" {
-    //         children
-    //     }
-    // }
-    ui max_panes=6 {
+swap_tiled_layout name="2_columns" {
+    // 1-2 content: children (zellij auto-splits into 1 or 2 columns)
+    ui max_panes=4 {
         pane split_direction="vertical" {
             children
         }
     }
-    ui max_panes=7 {
-        pane split_direction="vertical" {
-            pane; pane; pane;
-            pane { pane; pane; }
-        }
-    }
-    ui max_panes=8 {
-        pane split_direction="vertical" {
-            pane; pane;
-            pane { pane; pane; }
-            pane { pane; pane; }
-        }
-    }
-    ui max_panes=9 {
+    // 3 content: [1, 2]
+    ui max_panes=5 {
         pane split_direction="vertical" {
             pane;
             pane { pane; pane; }
+        }
+    }
+    // 4 content: [2, 2]
+    ui max_panes=6 {
+        pane split_direction="vertical" {
             pane { pane; pane; }
             pane { pane; pane; }
         }
     }
+    // 5 content: [2, 3]
+    ui max_panes=7 {
+        pane split_direction="vertical" {
+            pane { pane; pane; }
+            pane { pane; pane; pane; }
+        }
+    }
+    // 6 content: [3, 3]
+    ui max_panes=8 {
+        pane split_direction="vertical" {
+            pane { pane; pane; pane; }
+            pane { pane; pane; pane; }
+        }
+    }
+    // 7 content: [3, 4]
+    ui max_panes=9 {
+        pane split_direction="vertical" {
+            pane { pane; pane; pane; }
+            pane { pane; pane; pane; pane; }
+        }
+    }
+    // 8 content: [4, 4]
     ui max_panes=10 {
         pane split_direction="vertical" {
-            pane { pane; pane; }
-            pane { pane; pane; }
-            pane { pane; pane; }
-            pane { pane; pane; }
+            pane { pane; pane; pane; pane; }
+            pane { pane; pane; pane; pane; }
         }
     }
-    ui max_panes=11 {
-        pane split_direction="vertical" {
-            pane { pane; pane; }
-            pane { pane; pane; }
-            pane { pane; pane; }
-            pane { pane; pane; pane; }
-        }
-    }
-    ui max_panes=12 {
-        pane split_direction="vertical" {
-            pane { pane; pane; }
-            pane { pane; pane; }
-            pane { pane; pane; pane; }
-            pane { pane; pane; pane; }
-        }
-    }
-    ui max_panes=13 {
-        pane split_direction="vertical" {
-            pane { pane; pane; }
-            pane { pane; pane; pane; }
-            pane { pane; pane; pane; }
-            pane { pane; pane; pane; }
-        }
-    }
-    ui max_panes=14 {
-        pane split_direction="vertical" {
-            pane { pane; pane; pane; }
-            pane { pane; pane; pane; }
-            pane { pane; pane; pane; }
-            pane { pane; pane; pane; }
-        }
-    }
+    // overflow: stack remaining panes inside rightmost column
     ui {
         pane split_direction="vertical" {
-            pane { pane; pane; pane; }
-            pane { pane; pane; pane; }
-            pane { pane; pane; pane; }
-            pane { pane; pane;
+            pane { pane; pane; pane; pane; }
+            pane { pane; pane; pane;
                 pane stacked=true { children; }
             }
         }
     }
 }
 
-swap_tiled_layout name="rows" {
+swap_tiled_layout name="3_columns" {
+    // 1-3 content: children (auto-split)
+    ui max_panes=5 {
+        pane split_direction="vertical" {
+            children
+        }
+    }
+    // 4 content: [1, 1, 2]
+    ui max_panes=6 {
+        pane split_direction="vertical" {
+            pane; pane;
+            pane { pane; pane; }
+        }
+    }
+    // 5 content: [1, 2, 2]
     ui max_panes=7 {
         pane split_direction="vertical" {
-            pane
-            pane { children; }
+            pane;
+            pane { pane; pane; }
+            pane { pane; pane; }
         }
     }
+    // 6 content: [2, 2, 2]
+    ui max_panes=8 {
+        pane split_direction="vertical" {
+            pane { pane; pane; }
+            pane { pane; pane; }
+            pane { pane; pane; }
+        }
+    }
+    // 7 content: [2, 2, 3]
+    ui max_panes=9 {
+        pane split_direction="vertical" {
+            pane { pane; pane; }
+            pane { pane; pane; }
+            pane { pane; pane; pane; }
+        }
+    }
+    // 8 content: [2, 3, 3]
     ui max_panes=10 {
         pane split_direction="vertical" {
-            pane { children; }
+            pane { pane; pane; }
+            pane { pane; pane; pane; }
+            pane { pane; pane; pane; }
+        }
+    }
+    // 9 content: [3, 3, 3]
+    ui max_panes=11 {
+        pane split_direction="vertical" {
+            pane { pane; pane; pane; }
+            pane { pane; pane; pane; }
+            pane { pane; pane; pane; }
+        }
+    }
+    // 10 content: [3, 3, 4]
+    ui max_panes=12 {
+        pane split_direction="vertical" {
+            pane { pane; pane; pane; }
+            pane { pane; pane; pane; }
             pane { pane; pane; pane; pane; }
         }
     }
+    // 11 content: [3, 4, 4]
+    ui max_panes=13 {
+        pane split_direction="vertical" {
+            pane { pane; pane; pane; }
+            pane { pane; pane; pane; pane; }
+            pane { pane; pane; pane; pane; }
+        }
+    }
+    // 12 content: [4, 4, 4]
     ui max_panes=14 {
         pane split_direction="vertical" {
-            pane { children; }
+            pane { pane; pane; pane; pane; }
             pane { pane; pane; pane; pane; }
             pane { pane; pane; pane; pane; }
         }
     }
+    // overflow: stack remaining panes inside rightmost column
     ui {
         pane split_direction="vertical" {
             pane { pane; pane; pane; pane; }
@@ -122,6 +157,162 @@ swap_tiled_layout name="rows" {
         }
     }
 }
+
+swap_tiled_layout name="4_columns" {
+    // 1-4 content: children (auto-split)
+    ui max_panes=6 {
+        pane split_direction="vertical" {
+            children
+        }
+    }
+    // 5 content: [1, 1, 1, 2]
+    ui max_panes=7 {
+        pane split_direction="vertical" {
+            pane; pane; pane;
+            pane { pane; pane; }
+        }
+    }
+    // 6 content: [1, 1, 2, 2]
+    ui max_panes=8 {
+        pane split_direction="vertical" {
+            pane; pane;
+            pane { pane; pane; }
+            pane { pane; pane; }
+        }
+    }
+    // 7 content: [1, 2, 2, 2]
+    ui max_panes=9 {
+        pane split_direction="vertical" {
+            pane;
+            pane { pane; pane; }
+            pane { pane; pane; }
+            pane { pane; pane; }
+        }
+    }
+    // 8 content: [2, 2, 2, 2]
+    ui max_panes=10 {
+        pane split_direction="vertical" {
+            pane { pane; pane; }
+            pane { pane; pane; }
+            pane { pane; pane; }
+            pane { pane; pane; }
+        }
+    }
+    // 9 content: [2, 2, 2, 3]
+    ui max_panes=11 {
+        pane split_direction="vertical" {
+            pane { pane; pane; }
+            pane { pane; pane; }
+            pane { pane; pane; }
+            pane { pane; pane; pane; }
+        }
+    }
+    // 10 content: [2, 2, 3, 3]
+    ui max_panes=12 {
+        pane split_direction="vertical" {
+            pane { pane; pane; }
+            pane { pane; pane; }
+            pane { pane; pane; pane; }
+            pane { pane; pane; pane; }
+        }
+    }
+    // 11 content: [2, 3, 3, 3]
+    ui max_panes=13 {
+        pane split_direction="vertical" {
+            pane { pane; pane; }
+            pane { pane; pane; pane; }
+            pane { pane; pane; pane; }
+            pane { pane; pane; pane; }
+        }
+    }
+    // 12 content: [3, 3, 3, 3]
+    ui max_panes=14 {
+        pane split_direction="vertical" {
+            pane { pane; pane; pane; }
+            pane { pane; pane; pane; }
+            pane { pane; pane; pane; }
+            pane { pane; pane; pane; }
+        }
+    }
+    // 13 content: [3, 3, 3, 4]
+    ui max_panes=15 {
+        pane split_direction="vertical" {
+            pane { pane; pane; pane; }
+            pane { pane; pane; pane; }
+            pane { pane; pane; pane; }
+            pane { pane; pane; pane; pane; }
+        }
+    }
+    // 14 content: [3, 3, 4, 4]
+    ui max_panes=16 {
+        pane split_direction="vertical" {
+            pane { pane; pane; pane; }
+            pane { pane; pane; pane; }
+            pane { pane; pane; pane; pane; }
+            pane { pane; pane; pane; pane; }
+        }
+    }
+    // 15 content: [3, 4, 4, 4]
+    ui max_panes=17 {
+        pane split_direction="vertical" {
+            pane { pane; pane; pane; }
+            pane { pane; pane; pane; pane; }
+            pane { pane; pane; pane; pane; }
+            pane { pane; pane; pane; pane; }
+        }
+    }
+    // 16 content: [4, 4, 4, 4]
+    ui max_panes=18 {
+        pane split_direction="vertical" {
+            pane { pane; pane; pane; pane; }
+            pane { pane; pane; pane; pane; }
+            pane { pane; pane; pane; pane; }
+            pane { pane; pane; pane; pane; }
+        }
+    }
+    // overflow: stack remaining panes inside rightmost column
+    ui {
+        pane split_direction="vertical" {
+            pane { pane; pane; pane; pane; }
+            pane { pane; pane; pane; pane; }
+            pane { pane; pane; pane; pane; }
+            pane { pane; pane; pane;
+                pane stacked=true { children; }
+            }
+        }
+    }
+}
+
+// swap_tiled_layout name="rows" {
+//     ui max_panes=7 {
+//         pane split_direction="vertical" {
+//             pane
+//             pane { children; }
+//         }
+//     }
+//     ui max_panes=10 {
+//         pane split_direction="vertical" {
+//             pane { children; }
+//             pane { pane; pane; pane; pane; }
+//         }
+//     }
+//     ui max_panes=14 {
+//         pane split_direction="vertical" {
+//             pane { children; }
+//             pane { pane; pane; pane; pane; }
+//             pane { pane; pane; pane; pane; }
+//         }
+//     }
+//     ui {
+//         pane split_direction="vertical" {
+//             pane { pane; pane; pane; pane; }
+//             pane { pane; pane; pane; pane; }
+//             pane { pane; pane; pane;
+//                 pane stacked=true { children; }
+//             }
+//         }
+//     }
+// }
 
 // swap_tiled_layout name="horizontal" {
 //     ui max_panes=4 {

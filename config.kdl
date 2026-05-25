@@ -41,8 +41,8 @@ keybinds clear-defaults=true {
         bind "e" { TogglePaneEmbedOrFloating; SwitchToMode "Normal"; }
         bind "c" { SwitchToMode "RenamePane"; PaneNameInput 0;}
         bind "i" { TogglePanePinned; SwitchToMode "Normal"; }
-        bind "[" { PreviousSwapLayout; }
-        bind "]" { NextSwapLayout; }
+        bind "[" { PreviousSwapLayout; SwitchToMode "Normal"; }
+        bind "]" { NextSwapLayout; SwitchToMode "Normal"; }
         bind "H" { MovePane "Left"; SwitchToMode "Normal"; }
         bind "J" { MovePane "Down"; SwitchToMode "Normal"; }
         bind "K" { MovePane "Up"; SwitchToMode "Normal"; }
@@ -132,6 +132,7 @@ keybinds clear-defaults=true {
         bind "Ctrl o" { SwitchToMode "Normal"; }
         bind "Ctrl m" { SwitchToMode "Scroll"; }
         bind "d" { Detach; }
+        bind "q" { Quit; }
         bind "w" {
             LaunchOrFocusPlugin "session-manager" {
                 floating true
@@ -193,7 +194,13 @@ keybinds clear-defaults=true {
     }
     shared_except "locked" {
         bind "Ctrl \\" { SwitchToMode "Locked"; }
-        bind "Ctrl q" { Quit; }
+        bind "Ctrl F" { ToggleFocusFullscreen; }
+        bind "Ctrl H" { MoveFocus "Left"; }
+        bind "Ctrl L" { MoveFocus "Right"; }
+        bind "Ctrl J" { MoveFocus "Down"; }
+        bind "Ctrl K" { MoveFocus "Up"; }
+        bind "Ctrl N" { NewPane; }
+        bind "Ctrl Q" { CloseFocus; }
         // bind "Alt f" { ToggleFloatingPanes; }
         // bind "Alt n" { NewPane; }
         // bind "Alt i" { MoveTab "Left"; }

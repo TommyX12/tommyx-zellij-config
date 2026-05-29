@@ -491,6 +491,8 @@ theme "custom"
 
 default_layout "default"
 
+show_startup_tips false
+
 // Choose the mode that zellij uses when starting up.
 // Default: normal
 //
@@ -654,7 +656,7 @@ default_layout "default"
 // Whether to show release notes on first version run
 // Default: true
 //
-// show_release_notes false
+show_release_notes false
 
 // Whether to enable mouse hover effects and pane grouping functionality
 // Default: true
